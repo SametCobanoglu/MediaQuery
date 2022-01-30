@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MediaQuery</title>
+	<style>
+		*{
+			margin: 0px;
+			padding: 0px;
+			box-sizing: border-box;
+		}
+		header{
+			background-color: rgb(158, 48, 158);
+			display: flex;
+			justify-content: flex-end;
+			padding: 8px;
+			margin: 4px;
+		}
+		header a {
+			color: rgb(149, 168, 44);
+			text-decoration: none;
+			margin: 5px 5px 5px 10px;
+		}
+		section{
+            display: flex;
+            background-color: burlywood;
+            border: 3px solid pink;
+            outline: 10px solid rgb(202, 89, 89);
+            padding: 40px;
+            width: 70%;
+      	margin: auto;  
+            margin-top: 10%;
+            justify-content: center;            
+        }
+	  @media screen and (max-width: 992px){
+            body{
+                background-color: rgb(255, 115, 0);
+            }
+		#par1{
+			color: #6e2f3c;
+		}
+        }
+        @media screen and (max-width: 768px){
+            body{
+                background-color: rgb(50, 227, 192);
+            }
+		#par1{
+			color: #6e2f3c;
+		}
+        }
+        @media screen and (max-width: 600px){
+            body{
+                background-color: rgb(66, 51, 134);
+               
+            }
+            #par1{
+                display: none;                
+            }
+            #add::after {
+                content: 'Did you realize, you made a magic!';               
+            }
+
+            header{
+                display: flex;
+                flex-direction: column;
+                background-color: bisque;
+                align-items: center;
+            }
+            header a{
+                color: red;
+            }
+		
+        }
+	</style>
+</head>
+<body>
+	<header>
+		<a href="Home">Home</a>
+		<a href="About">About</a>
+		<a href="Product">Product</a>
+		<a href="Contact">Contact</a>
+	</header>
+	<section>
+		<div id="body-container">
+			<h3 id="par1">First make me smaller, than lost me!</h3>
+			<h4 id="add"></h4>
+		</div>
+
+	</section>
+</body>
+</html>
